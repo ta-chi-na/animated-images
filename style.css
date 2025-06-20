@@ -1,0 +1,41 @@
+/* Sunset gradient background */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #fceabb, #f8b500, #ff758c);
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Styling the image as a perfect circle */
+  img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+  }
+  
+  /* 3D spinning animation */
+  @keyframes spin3D {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+  
+  /* Apply animation to image container */
+  .spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: spin3D 8s linear infinite; /* slower, more dramatic 3D spin */
+    perspective: 1000px;
+  }
+  
